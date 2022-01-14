@@ -26,4 +26,9 @@ public class Enemy : MonoBehaviour
         Vector3 pos = Vector3.MoveTowards(transform.position, playerPos, speed * Time.fixedDeltaTime);
         rig.MovePosition(pos);
     }
+
+    public void Defeat()
+    {
+        Destroy(gameObject);
+    }
 }
