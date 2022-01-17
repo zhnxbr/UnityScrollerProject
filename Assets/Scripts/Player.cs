@@ -8,7 +8,9 @@ public class Player : MonoBehaviour
     [SerializeField] private Transform groundCheckTransform = null;
     [SerializeField] private LayerMask playerMask;
 
+    public VictoryScreen screen;
     private bool jumpKeyWasPressed;
+    //private bool hasWon = false;
     private float horizontalInput;
     private Rigidbody rigidBodyComponent;
     
@@ -65,7 +67,17 @@ public class Player : MonoBehaviour
     {
         if (other.gameObject.layer == 7)
         {
-            Destroy(other.gameObject); 
+            Destroy(other.gameObject);
+            screen.displayWinScreen();
+            //hasWon = true;
+            //Win();
+
         }
     }
+    /*
+    public static void Win()
+    {
+        VictoryScreen.displayWinScreen();
+    }
+    */
 }

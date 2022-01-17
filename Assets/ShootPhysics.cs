@@ -21,5 +21,7 @@ public class ShootPhysics : MonoBehaviour
             enemy.Defeat();
         }
         Destroy(gameObject);
+
+        
     }
 }

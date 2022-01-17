@@ -6,8 +6,6 @@ public class PlayerShoot : MonoBehaviour
 {
     public Transform firePoint;
     public GameObject projectilePrefab;
-    // Start is called before the first frame update
- 
     // Update is called once per frame
     void Update()
     {
